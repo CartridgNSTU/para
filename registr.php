@@ -34,3 +34,6 @@
 	</div>
 </body>
 </html>
+<?php
+	echo $_COOKIE['test']; // выведет 'abcde'
+?>
