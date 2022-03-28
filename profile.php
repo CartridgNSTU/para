@@ -8,9 +8,9 @@
 		$surname = $_POST['surname'];
 		$year = $_POST['old'];
 
-		$_SESSION['user_pername'] = $name;
-		$_SESSION['user_surname'] = $password;
-		$_SESSION['user_old'] = $year;
+		$_SESSION['user_pername'] = $_POST['pername'];
+		$_SESSION['user_surname'] = $_POST['surname'];
+		$_SESSION['user_old'] = $_POST['old'];
 	}
 ?>
 <!DOCTYPE html>
@@ -24,9 +24,9 @@
 	<div id="content">
 		<form action="" method="post">
 			<h3>Профиль</h3>
-			<input type="text" name="pername" value='<?php if(isset($_SESSION['user_pername'])) echo $_SESSION['user_pername'] ?>' placeholder="Имя"><br>	
-			<input type="text" name="surname" placeholder="Фамилия"><br>
-			<input type="text" name="old" placeholder="Возраст"><br>
+			<input type="text" name="pername" value=' <?php if(isset($_SESSION['user_pername'])) echo $_SESSION['user_pername'] ?>'  placeholder="Имя"><br>	
+			<input type="text" name="surname" value=' <?php if(isset($_SESSION['user_surname'])) echo $_SESSION['user_surname'] ?>' placeholder="Фамилия"><br>
+			<input type="text" name="old" value=' <?php if(isset($_SESSION['user_old'])) echo $_SESSION['user_old'] ?>' placeholder="Возраст"><br>
 			<input type="submit" value="Сохранить" name="" >
 		</form>
 	</div>
